@@ -331,7 +331,7 @@ scenario = st.sidebar.selectbox("Escenario Precio", ["Constante", "Bajo", "Medio
 # -----------------------------
 
 if uploaded_file is None:
-    st.info("👋 **Bienvenido experto en R.**")
+    st.info("👋 **¡Bienvenidos!**")
     st.markdown("""
     Para empezar, por favor sube un archivo Excel con dos hojas:
     1. **Proyectos**: Definición de cada SNC (nombre, area, modelo carbono).
@@ -374,5 +374,6 @@ with col2:
 # 5. Descarga de resultados
 csv = df_macc.to_csv(index=False).encode('utf-8')
 st.download_button("Descargar Resultados (CSV)", csv, "macc_results.csv", "text/csv")
+
 
 
