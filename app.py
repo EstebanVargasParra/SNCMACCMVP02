@@ -34,11 +34,6 @@ with open("plantilla_ejemplo.xlsx", "rb") as file:
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
 st.caption("Sube tu plantilla Excel para generar la curva de abatimiento y portafolio.")
-streamlit>=1.31
-pandas>=2.0
-numpy>=1.24
-plotly>=5.18
-pyyaml>=6.0
 # -----------------------------
 # 1. Lógica de lectura de EXCEL (NUEVO)
 # -----------------------------
@@ -379,4 +374,5 @@ with col2:
 # 5. Descarga de resultados
 csv = df_macc.to_csv(index=False).encode('utf-8')
 st.download_button("Descargar Resultados (CSV)", csv, "macc_results.csv", "text/csv")
+
 
